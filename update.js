@@ -9,14 +9,7 @@ const config = {
 
 const formattedDate =()=> {
 	const now = new Date()
-	const d = `${now.getDate()}`.padStart(2, '0')
-	const m = `${1 + now.getMonth()}`.padStart(2, '0')
-	const y = now.getFullYear()
-
-	const h = `${now.getHours()}`.padStart(2, '0')
-	const mi = `${now.getMinutes()}`.padStart(2, '0')
-	const s = `${now.getSeconds()}`.padStart(2, '0')
-	return `${d}.${m}.${y} ${h}:${mi}:${s}`
+	return now.toLocaleString('de-DE', {timeZone: 'Europe/Helsinki'})
 }
 
 let error = 0
