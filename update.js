@@ -51,7 +51,7 @@ const updateData =async ()=> {
 	console.log(`Dependent on errors = ${error}, saving file ...`)
 	if(!error) {
 		console.log('Saving updated data:', data)
-		fs.writeFile("data.json", JSON.stringify(data), 'utf8', (err) => {
+		fs.writeFile("docs/data.json", JSON.stringify(data), 'utf8', (err) => {
 			if(err) {
 				console.log("Error while serializing data.", err)
 			}
