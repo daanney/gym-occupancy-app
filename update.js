@@ -7,9 +7,18 @@ const config = {
 	urlTimeline: `https://visits.fressi24.fi/api/v1/locations/${locationId}/timeline`
 }
 
+const dateOptions = { 
+	year: 'numeric', 
+	month: 'numeric', 
+	day: 'numeric', 
+	hour: 'numeric',
+	minute: 'numeric',
+	timeZone: 'Europe/Helsinki'
+}
+
 const formattedDate =()=> {
 	const now = new Date()
-	return now.toLocaleString('de-DE', {timeZone: 'Europe/Helsinki'})
+	return now.toLocaleString('de-DE', dateOptions)
 }
 
 let error = 0
